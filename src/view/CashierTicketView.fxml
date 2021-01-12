@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TicketController">
+   <children>
+      <TextField fx:id="denumireSpectacolText" layoutX="193.0" layoutY="41.0" prefHeight="25.0" prefWidth="97.0" promptText="Spectacol" />
+      <Label layoutX="216.0" layoutY="20.0" text="Spectacol" />
+      <Button fx:id="searchProdBtn" layoutX="214.0" layoutY="72.0" mnemonicParsing="false" onAction="#searchTicket" prefHeight="25.0" prefWidth="56.0" text="Search" />
+      <Button fx:id="addProdBtn" layoutX="91.0" layoutY="149.0" mnemonicParsing="false" onAction="#insertTicket" prefHeight="25.0" prefWidth="79.0" text="Add Ticket" />
+      <TextArea fx:id="resultArea" layoutX="7.0" layoutY="216.0" prefHeight="119.0" prefWidth="167.0" wrapText="true" />
+      <Label layoutX="14.0" layoutY="181.0" text="Result Console">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <VBox layoutX="97.0" layoutY="24.0" prefHeight="67.0" prefWidth="79.0" spacing="4.0">
+         <children>
+            <TextField fx:id="spectacolText" prefHeight="25.0" prefWidth="79.0" promptText="Spectacol" />
+            <TextField fx:id="randText" prefHeight="25.0" prefWidth="79.0" promptText="Rand" />
+         </children>
+      </VBox>
+      <VBox layoutX="9.0" layoutY="28.0" prefHeight="67.0" prefWidth="67.0" spacing="12.0">
+         <children>
+            <Label prefHeight="13.0" prefWidth="67.0" text="Spectacol" />
+            <Label prefHeight="16.0" prefWidth="67.0" text="Rand" />
+         </children>
+      </VBox>
+      <Separator layoutY="13.0" prefHeight="3.0" prefWidth="685.0" />
+      <Separator layoutX="180.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+      <TableView fx:id="ticketTable" editable="true" layoutX="193.0" layoutY="102.0" prefHeight="234.0" prefWidth="486.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="spectacolColumn" prefWidth="262.0" text="Spectacol" />
+          <TableColumn fx:id="numarColumn" minWidth="0.0" prefWidth="114.0" text="Numar" />
+          <TableColumn fx:id="randColumn" prefWidth="109.0" text="Rand" />
+        </columns>
+      </TableView>
+      <Button fx:id="searchProdsBtn" layoutX="332.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchTickets" prefHeight="25.0" prefWidth="120.0" text="Search All Tickets" />
+   </children>
+</AnchorPane>

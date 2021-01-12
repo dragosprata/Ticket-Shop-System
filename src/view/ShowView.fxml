@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SpectacolController">
+   <children>
+      <TextField fx:id="denumireSpectacolText" layoutX="193.0" layoutY="41.0" prefHeight="25.0" prefWidth="120.0" promptText="denumire spectacol" />
+      <Label layoutX="229.0" layoutY="21.0" text="Denumire" />
+      <Button fx:id="searchProdBtn" layoutX="227.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchShow" prefHeight="25.0" prefWidth="56.0" text="Search" />
+      <Button fx:id="deleteProdBtn" layoutX="595.0" layoutY="70.0" mnemonicParsing="false" onAction="#deleteShow" prefHeight="25.0" prefWidth="56.0" text="Delete" />
+      <Button fx:id="updateProdBtn" layoutX="321.0" layoutY="70.0" mnemonicParsing="false" onAction="#updateShowOpening" prefHeight="25.0" prefWidth="107.0" text="Update Opening" />
+      <Button fx:id="addProdBtn" layoutX="90.0" layoutY="207.0" mnemonicParsing="false" onAction="#insertShow" text="Add Show" />
+      <TextArea fx:id="resultArea" layoutX="7.0" layoutY="250.0" prefHeight="85.0" prefWidth="167.0" wrapText="true" />
+      <Label layoutX="9.0" layoutY="231.0" text="Result Console">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="newOpeningText" layoutX="326.0" layoutY="41.0" prefHeight="25.0" prefWidth="98.0" promptText="premiera noua" />
+      <Label layoutX="335.0" layoutY="20.0" prefHeight="17.0" prefWidth="79.0" text="Premiera noua" />
+      <VBox layoutX="97.0" layoutY="24.0" prefHeight="171.0" prefWidth="79.0" spacing="4.0">
+         <children>
+            <TextField fx:id="denumireText" prefHeight="25.0" prefWidth="79.0" promptText="Denumire" />
+            <TextField fx:id="genText" prefHeight="25.0" prefWidth="79.0" promptText="gen" />
+            <TextField fx:id="regieText" promptText="Regie" />
+            <TextField fx:id="distributieText" promptText="Distributie" />
+            <TextField fx:id="premieraText" prefWidth="79.0" promptText="Premiera" />
+            <TextField fx:id="nrBileteText" prefWidth="79.0" promptText="Nr.bilete" />
+         </children>
+      </VBox>
+      <VBox layoutX="9.0" layoutY="28.0" prefHeight="171.0" prefWidth="67.0" spacing="12.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="67.0" text="Denumire" />
+            <Label prefHeight="17.0" prefWidth="69.0" text="Gen" />
+            <Label prefHeight="17.0" prefWidth="71.0" text="Regie" />
+            <Label prefHeight="17.0" prefWidth="72.0" text="Distributie" />
+            <Label prefHeight="17.0" prefWidth="67.0" text="Premiera" />
+            <Label prefHeight="17.0" prefWidth="67.0" text="Nr.bilete" />
+         </children>
+      </VBox>
+      <Separator layoutY="17.0" prefHeight="0.0" prefWidth="800.0" />
+      <Separator layoutX="180.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+      <TableView fx:id="showTable" editable="true" layoutX="193.0" layoutY="102.0" prefHeight="234.0" prefWidth="602.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="denumireSpectacolColumn" prefWidth="60.0" text="Denumire" />
+          <TableColumn fx:id="genColumn" prefWidth="67.0" text="Gen" />
+          <TableColumn fx:id="regieColumn" prefWidth="100.0" text="Regie" />
+            <TableColumn fx:id="distributieColumn" minWidth="0.0" prefWidth="226.0" text="Distributie" />
+            <TableColumn fx:id="premieraColumn" minWidth="0.0" prefWidth="79.0" text="Premiera" />
+            <TableColumn fx:id="nrBileteColumn" minWidth="0.0" prefWidth="58.0" text="Nr.bilete" />
+        </columns>
+      </TableView>
+      <Button fx:id="searchProdsBtn" layoutX="666.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchShows" prefHeight="25.0" prefWidth="120.0" text="Search All Shows" />
+      <TextField fx:id="newNrOfTicketsText" layoutX="469.0" layoutY="41.0" prefHeight="25.0" prefWidth="90.0" promptText="nr. bilete nou" />
+      <Label layoutX="469.0" layoutY="20.0" prefHeight="17.0" prefWidth="90.0" text="Nr. bilete nou" />
+      <Button fx:id="updateProdBtn1" layoutX="448.0" layoutY="70.0" mnemonicParsing="false" onAction="#updateShowNrOfTickets" prefHeight="25.0" prefWidth="131.0" text="Update Nr. of Tickets" />
+   </children>
+</AnchorPane>

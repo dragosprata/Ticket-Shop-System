@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountController">
+   <children>
+      <TextField fx:id="casierUsernameText" layoutX="193.0" layoutY="41.0" prefHeight="25.0" prefWidth="67.0" promptText="username" />
+      <Label layoutX="194.0" layoutY="21.0" text="Username" />
+      <Button fx:id="searchProdBtn" layoutX="194.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchUser" prefHeight="25.0" prefWidth="56.0" text="Search" />
+      <Button fx:id="deleteProdBtn" layoutX="287.0" layoutY="70.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="56.0" text="Delete" />
+      <Button fx:id="addProdBtn" layoutX="90.0" layoutY="207.0" mnemonicParsing="false" onAction="#insertUser" text="Add Account" />
+      <TextArea fx:id="resultArea" layoutX="7.0" layoutY="250.0" prefHeight="85.0" prefWidth="167.0" wrapText="true" />
+      <Label layoutX="9.0" layoutY="231.0" text="Result Console">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <VBox layoutX="97.0" layoutY="24.0" prefHeight="111.0" prefWidth="79.0" spacing="4.0">
+         <children>
+            <TextField fx:id="usernameText" prefHeight="25.0" prefWidth="79.0" promptText="Username" />
+            <TextField fx:id="parolaText" prefHeight="25.0" prefWidth="79.0" promptText="Parola" />
+            <TextField fx:id="numeText" promptText="Nume" />
+            <TextField fx:id="tipText" promptText="Tip" />
+         </children>
+      </VBox>
+      <VBox layoutX="9.0" layoutY="28.0" prefHeight="111.0" prefWidth="67.0" spacing="12.0">
+         <children>
+            <Label prefHeight="13.0" prefWidth="67.0" text="Username" />
+            <Label prefHeight="16.0" prefWidth="67.0" text="Parola" />
+            <Label prefHeight="5.0" prefWidth="67.0" text="Nume" />
+            <Label prefHeight="15.0" prefWidth="67.0" text="Tip" />
+         </children>
+      </VBox>
+      <Separator layoutY="20.0" prefHeight="0.0" prefWidth="685.0" />
+      <Separator layoutX="180.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+      <TableView fx:id="usersTable" editable="true" layoutX="193.0" layoutY="102.0" prefHeight="234.0" prefWidth="485.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="casierUsernameColumn" prefWidth="119.0" text="Username" />
+          <TableColumn fx:id="casierPasswordColumn" prefWidth="126.0" text="Parola" />
+          <TableColumn fx:id="casierNameColumn" prefWidth="123.0" text="Nume" />
+            <TableColumn fx:id="tipColumn" minWidth="0.0" prefWidth="116.0" text="Tip" />
+        </columns>
+      </TableView>
+      <Button fx:id="searchProdsBtn" layoutX="376.0" layoutY="68.0" mnemonicParsing="false" onAction="#searchUsers" prefHeight="25.0" prefWidth="120.0" text="Search All Users" />
+   </children>
+</AnchorPane>

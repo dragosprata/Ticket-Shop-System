@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderController">
+   <children>
+      <Button fx:id="addProdBtn" layoutX="101.0" layoutY="117.0" mnemonicParsing="false" onAction="#insertOrder" text="Add Order" />
+      <TextArea fx:id="resultArea" layoutX="7.0" layoutY="162.0" prefHeight="173.0" prefWidth="167.0" wrapText="true" />
+      <Label layoutX="14.0" layoutY="142.0" text="Result Console">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <VBox layoutX="97.0" layoutY="24.0" prefHeight="89.0" prefWidth="79.0" spacing="4.0">
+         <children>
+            <TextField fx:id="cumparatorText" prefHeight="25.0" prefWidth="79.0" promptText="cumparator" />
+            <TextField fx:id="spectacolText" prefHeight="25.0" prefWidth="79.0" promptText="spectacol" />
+            <TextField fx:id="nrBileteText" promptText="nrBilete" />
+         </children>
+      </VBox>
+      <VBox layoutX="9.0" layoutY="28.0" prefHeight="89.0" prefWidth="67.0" spacing="12.0">
+         <children>
+            <Label prefHeight="13.0" prefWidth="67.0" text="Cumparator" />
+            <Label prefHeight="16.0" prefWidth="67.0" text="Spectacol" />
+            <Label prefHeight="5.0" prefWidth="67.0" text="Nr_bilete" />
+         </children>
+      </VBox>
+      <Separator layoutY="20.0" prefHeight="0.0" prefWidth="685.0" />
+      <Separator layoutX="180.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+      <TableView fx:id="ordersTable" editable="true" layoutX="193.0" layoutY="60.0" prefHeight="276.0" prefWidth="485.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="cumparatorColumn" prefWidth="166.0" text="Cumparator" />
+          <TableColumn fx:id="spectacolColumn" prefWidth="177.0" text="Spectacol" />
+            <TableColumn fx:id="nrBileteColumn" minWidth="0.0" prefWidth="138.0" text="Nr. bilete" />
+        </columns>
+      </TableView>
+      <Button layoutX="193.0" layoutY="28.0" mnemonicParsing="false" onAction="#searchOrders" prefHeight="25.0" prefWidth="120.0" text="Search All Orders" />
+   </children>
+</AnchorPane>
